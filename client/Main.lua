@@ -82,16 +82,6 @@ CreateThread(function()
     end
 end)
 
-CreateThread(function()
-    while true do
-        for k,v in pairs(Areas.current_areas) do
-            local inside = Areas.InsideArea(k)
-            print(k, inside)
-        end
-        Wait(500)
-    end
-end)
-
 exports("Create", Areas.CreateArea)
 exports("Delete", Areas.DeleteArea)
 exports("IsInside", Areas.InsideArea)
